@@ -2,9 +2,9 @@
   "name": "node-api-technical",
   "version": "1.0.0",
   "description": "node-api-technical",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "nodemon index.js",
     "cy:open": "./node_modules/.bin/cypress open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
