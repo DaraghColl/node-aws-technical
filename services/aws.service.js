@@ -41,3 +41,25 @@ exports.getAllSubnets = () => {
     });
   });
 };
+
+// get all subnets by vpc id
+exports.getAllSubnetsByVPC = (vpcID) => {
+  const params = {
+    Filters: [
+      {
+        Name: 'vpc-id',
+        Values: [vpcID],
+      },
+    ],
+  };
+
+  return new Promise((resolve, reject) => {
+    ec2.describeSubnets(params, (err, data) => {
+      if (data) {
+        resolve(data.Subnets);
+      } else if (err) {
+        reject(err);
+      }
+    });
+  });
+};
