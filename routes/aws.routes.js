@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/regions', (req, res) => {
-  res.json({ message: 'get all regions' });
-});
+// controller
+const awsController = require('../controllers/aws.controller');
+
+router.get('/regions', awsController.getAllRegions);
 
 router.get('/vpcs', (req, res) => {
   res.json({ message: 'get all vpcs' });
