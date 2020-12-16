@@ -1,8 +1,4 @@
-// fetch data buttons
 const regionsButton = document.getElementById('_get_all_regions');
-const vpcsButton = document.getElementById('_get_all_vpcs');
-const subnetsButton = document.getElementById('_get_all_subnets');
-
 const dataSection = document.getElementById('_data_section');
 
 // event listeners
@@ -20,8 +16,6 @@ const fetchRegions = () => {
 };
 
 const createRegionsHTML = (regions) => {
-  console.log(regions);
-
   regions.forEach((region) => {
     let card = document.createElement('div');
     card.classList.add('card');

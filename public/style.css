@@ -32,9 +32,11 @@
 }
 
 .data-select__button {
-    background-color: var(--primary);
-    color: #fff;
+    background-color: #fff;
+    color: var(--primary);
     border: 2px solid var(--primary);
+    display: flex;
+    align-items: center;
     padding: 0.2rem;
     margin: 0.2rem;
     font-weight: bold;
@@ -44,12 +46,26 @@
     transition: 0.3s ease-in-out;
 }
 
+.data-select__icon {
+    fill: var(--primary);
+    width: 1rem;
+    margin-left: 0.3rem;
+    transition: 0.3s ease-in-out;
+}
+
 .data-select__button:hover {
-    background-color: #fff;
-    color: var(--primary);
+    background-color: var(--primary);
+    color: #fff;
     border: 2px solid var(--primary);
     transition: 0.3s ease-in-out;
 }
+
+.data-select__button:hover .data-select__icon {
+    fill: #fff;
+    transition: 0.3s ease-in-out;
+}
+
+
 
 .data {
     display: grid;
