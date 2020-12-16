@@ -4,14 +4,13 @@ const router = express.Router();
 // controller
 const awsController = require('../controllers/aws.controller');
 
+// api/regions
 router.get('/regions', awsController.getAllRegions);
 
-router.get('/vpcs', (req, res) => {
-  res.json({ message: 'get all vpcs' });
-});
+// api/vpcs
+router.get('/vpcs', awsController.getAllVPCs);
 
-router.get('/subnets', (req, res) => {
-  res.json({ message: 'get all subnets' });
-});
+// api/subnets
+router.get('/subnets', awsController.getAllSubnets);
 
 module.exports = router;

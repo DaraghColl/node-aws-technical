@@ -15,3 +15,29 @@ exports.getAllRegions = () => {
     });
   });
 };
+
+// get all VPCs from aws
+exports.getAllVPCs = () => {
+  return new Promise((resolve, reject) => {
+    ec2.describeVpcs({}, (err, data) => {
+      if (data) {
+        resolve(data.Vpcs);
+      } else if (err) {
+        reject(err);
+      }
+    });
+  });
+};
+
+// get all subnets from aws
+exports.getAllSubnets = () => {
+  return new Promise((resolve, reject) => {
+    ec2.describeSubnets({}, (err, data) => {
+      if (data) {
+        resolve(data.Subnets);
+      } else if (err) {
+        reject(err);
+      }
+    });
+  });
+};
