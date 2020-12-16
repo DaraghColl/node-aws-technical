@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+/** variables **/
+:root {
+    --primary: #1e2245;
+    --secondary: #8c9cb4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto',
+        sans-serif;
+}
+
+.container {
+    max-width: 989px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.app-heading {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    color: var(--primary);
+}
+
+.data-select {
+    display: flex;
+    justify-content: center;
+}
+
+.data-select__button {
+    background-color: var(--primary);
+    color: #fff;
+    border: 2px solid var(--primary);
+    padding: 0.2rem;
+    margin: 0.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.data-select__button:hover {
+    background-color: #fff;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    transition: 0.3s ease-in-out;
+}
+
+.data {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card {
+    padding: 2rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1),
+        0 4px 6px -2px rgba(0, 0, 0, .05);
+    border-radius: 3px;
+}
+
+.card__heading {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.card__endpoint {
+    font-size: 1.2rem;
+    font-weight: lighter;
+    color: var(--secondary);
+}
+
+
+
+/** media queries **/
+@media(max-width: 992px) {
+    .data {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+}
+
+@media(max-width: 768px) {
+    .data {
+        grid-template-columns: 1fr
+    }
+}

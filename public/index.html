@@ -3,13 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>AWS Data</title>
   </head>
   <body>
-    AWS Data
-    <button id="_get_all_regions">Get All Regions</button>
-    <button id="_get_all_vpcs">Get All VPCs</button>
-    <button id="_get_all_subnets">Get All Subnets</button>
+    <div class="container">
+      <h1 class="app-heading">AWS Data</h1>
+
+      <!-- buttons to select data to fetch  -->
+      <div class="data-select">
+        <button id="_get_all_regions" class="data-select__button">
+          Get All Regions
+        </button>
+        <button id="_get_all_vpcs" class="data-select__button">
+          Get All VPCs
+        </button>
+        <button id="_get_all_subnets" class="data-select__button">
+          Get All Subnets
+        </button>
+      </div>
+
+      <!-- area where aws info will be populated  -->
+      <section id="_data_section" class="data"></section>
+    </div>
 
     <script src="./app.js"></script>
   </body>
