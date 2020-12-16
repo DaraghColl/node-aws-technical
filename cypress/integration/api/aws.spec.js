@@ -8,4 +8,10 @@ describe('get all regions', () => {
       .its('content-type')
       .should('include', 'application/json');
   });
+
+  it('should return 16 results', () => {
+    cy.request('api/regions').should((response) => {
+      expect(response.body.data).to.have.length(16);
+    });
+  });
 });

@@ -8,11 +8,15 @@
   </head>
   <body>
     <div class="container">
-      <h1 class="app-heading">AWS Data</h1>
+      <h1 class="app-heading" data-cy="landing-heading">AWS Data</h1>
 
       <!-- buttons to select data to fetch  -->
       <div class="data-select">
-        <button id="_get_all_regions" class="data-select__button">
+        <button
+          id="_get_all_regions"
+          class="data-select__button"
+          data-cy="get-regions-button"
+        >
           Get All Regions
           <svg class="data-select__icon" viewBox="0 0 16 16">
             <path
@@ -24,7 +28,11 @@
       </div>
 
       <!-- area where aws info will be populated  -->
-      <section id="_data_section" class="data"></section>
+      <section
+        id="_data_section"
+        class="data"
+        data-cy="aws-data-grid"
+      ></section>
     </div>
 
     <script src="./app.js"></script>
