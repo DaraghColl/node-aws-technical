@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
+    "cy:open": "./node_modules/.bin/cypress open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -14,6 +15,7 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "cypress": "^6.1.0",
     "nodemon": "^2.0.6"
   }
 }
