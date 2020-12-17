@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon index.js",
     "cy:open": "./node_modules/.bin/cypress open",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha tests/**/*.spec.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,7 +15,11 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
     "cypress": "^6.1.0",
-    "nodemon": "^2.0.6"
+    "mocha": "^8.2.1",
+    "nodemon": "^2.0.6",
+    "sinon": "^9.2.2",
+    "sinon-chai": "^3.5.0"
   }
 }
