@@ -14,6 +14,8 @@ npm install
 ~/.aws/credentials
 ```
 
+## Folder Structure & Files
+
 ### API
 
 - index.js - entry point, express setup (routes, static files)
