@@ -36,4 +36,4 @@ npm install
 
 ### Issues
 
-##### Could not find vpc endpoint with 'Region' param - only VPCS by VPC ID, so vpc endpoint returns all (think uses )
+##### Could not find vpc endpoint with 'Region' param - only VPCS by VPC ID.
