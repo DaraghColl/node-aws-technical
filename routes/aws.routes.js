@@ -10,10 +10,7 @@ router.get('/regions', awsController.getAllRegions);
 // api/vpcs
 router.get('/vpcs', awsController.getAllVPCs);
 
-// api/subnets
-router.get('/subnets', awsController.getAllSubnets);
-
-// api/vpcID
+// api/subnetsByVPC/: vpcID
 router.get('/subnetsByVPC/:vpc', awsController.getAllSubnetsByVPC);
 
 module.exports = router;

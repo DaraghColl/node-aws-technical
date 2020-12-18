@@ -16,21 +16,13 @@ exports.getAllVPCs = (req, res) => {
     .catch((err) => res.status(500).json({ status: 'error', error: err }));
 };
 
-// get all subnets
-exports.getAllSubnets = (req, res) => {
-  awsService
-    .getAllSubnets()
-    .then((data) => res.status(200).json({ status: 'success', data: data }))
-    .catch((err) => res.status(500).json({ status: 'error', error: err }));
-};
-
 /**
  * get all subnets for VPC
  * req params = vpc (string)
  */
 exports.getAllSubnetsByVPC = (req, res) => {
   awsService
-    .getAllSubnets(req.params.vpc)
+    .getAllSubnetsByVPC(req.params.vpc)
     .then((data) => res.status(200).json({ status: 'success', data: data }))
     .catch((err) => res.status(500).json({ status: 'error', error: err }));
 };

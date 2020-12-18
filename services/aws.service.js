@@ -31,19 +31,6 @@ exports.getAllVPCs = () => {
   });
 };
 
-// get all subnets from aws
-exports.getAllSubnets = () => {
-  return new Promise((resolve, reject) => {
-    ec2.describeSubnets({}, (err, data) => {
-      if (data) {
-        resolve(data.Subnets);
-      } else if (err) {
-        reject(err);
-      }
-    });
-  });
-};
-
 // get all subnets by vpc id
 exports.getAllSubnetsByVPC = (vpcID) => {
   const params = {
