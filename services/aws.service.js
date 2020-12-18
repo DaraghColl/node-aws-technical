@@ -3,6 +3,7 @@ const aws = require('aws-sdk');
 aws.config.update({ region: 'eu-west-1' });
 const ec2 = new aws.EC2({ apiVersion: '2016-11-15' });
 
+// export needed for unit tests
 exports.ec2 = ec2;
 
 // get all regions from aws
