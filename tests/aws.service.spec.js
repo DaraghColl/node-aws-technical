@@ -1,5 +1,4 @@
 const awsService = require('../services/aws.service');
-const aws = require('aws-sdk');
 
 // test libs
 const chai = require('chai');
@@ -7,14 +6,15 @@ const expect = chai.expect;
 const sinon = require('sinon');
 const sinonChai = require('sinon-chai');
 
-describe('aws service', (done) => {
-  it('should get all regions', () => {
-    const ec2 = new aws.EC2({});
-    const getRegionsStub = sinon.stub(awsService.ec2, 'describeRegions');
+describe('aws service', () => {
+  it('should get all regions', (done) => {
+    // stub aws describe regions
+    const describeRegionsStub = sinon.stub(awsService.ec2, 'describeRegions');
 
+    // mock regions
     const mockRegionsData = {
       status: 'success',
-      data: [
+      Regions: [
         {
           Endpoint: 'ec2.eu-north-1.amazonaws.com',
           RegionName: 'eu-north-1',
@@ -28,10 +28,17 @@ describe('aws service', (done) => {
       ],
     };
 
-    getRegionsStub.yields(mockRegionsData);
+    describeRegionsStub.yields(null, mockRegionsData);
 
-    awsService.getAllRegions();
-
-    expect(getRegionsStub.called);
+    // call get all regions & expect return data to equal mock
+    awsService
+      .getAllRegions()
+      .then((data) => {
+        expect(data).to.eql(mockRegionsData.Regions);
+        done();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   });
 });
