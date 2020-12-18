@@ -34,6 +34,6 @@ npm install
 - public/app.js: fetches data from API & binds to DOM
 - public/style.css: app styling
 
-## Issues
+### Issues
 
-#### Could not find vpc endpoint with 'Region' param - only VPCS by VPC ID, so vpc endpoint returns all (think uses )
+##### Could not find vpc endpoint with 'Region' param - only VPCS by VPC ID, so vpc endpoint returns all (think uses )
