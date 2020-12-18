@@ -8,7 +8,11 @@ Use [npm](https://www.npmjs.com/) to install dependencies.
 npm install
 ```
 
-## Folder Structure & Files
+## AWS Credentials - shared credntials
+
+```bash
+~/.aws/credentials
+```
 
 ### API
 
