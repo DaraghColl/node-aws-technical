@@ -8,6 +8,26 @@ Use [npm](https://www.npmjs.com/) to install dependencies.
 npm install
 ```
 
+## Scripts
+
+start
+
+```bash
+npm run start
+```
+
+test - unit
+
+```bash
+npm run test
+```
+
+test - cypress
+
+```bash
+npm run cy:open
+```
+
 ## AWS Credentials - shared credntials
 
 ```bash
